@@ -11,15 +11,15 @@ import java.util.List;
 @NoArgsConstructor
 @Builder
 @Entity
-public class Clients {
+public class Client {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     private String name;
 
-    @OneToMany(mappedBy = "clients", cascade =CascadeType.ALL,orphanRemoval = true)
+    @OneToMany(mappedBy = "client", cascade =CascadeType.ALL,orphanRemoval = true)
     @JsonManagedReference
     @ToString.Exclude
-    List<Contacts> contacts;
+    List<Contact> contact;
 }

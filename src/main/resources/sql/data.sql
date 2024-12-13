@@ -1,4 +1,4 @@
-INSERT INTO clients (name)
+INSERT INTO client (name)
 VALUES ( 'Client A'),
        ( 'Client B'),
        ( 'Client C'),
@@ -6,7 +6,7 @@ VALUES ( 'Client A'),
        ( 'Client E');
 
 -- Вставка данных в таблицу contacts
-INSERT INTO contacts (clients_id, type, contact_value)
+INSERT INTO contact (client_id, type, contact_value)
 VALUES (1, 'email', 'clientA@example.com'),
        (2, 'phone', '123-456-7890'),
        (3, 'email', 'clientC@example.com'),

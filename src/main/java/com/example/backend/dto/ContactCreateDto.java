@@ -1,5 +1,6 @@
 package com.example.backend.dto;
 
+import com.example.backend.entity.ContactType;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -7,9 +8,10 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class ContactsDto {
+public class ContactCreateDto {
+    private Long clientsId;
 
-    private String type;
+    private ContactType type;
 
     private String contact_value;
 }

@@ -9,18 +9,19 @@ import lombok.*;
 @NoArgsConstructor
 @Builder
 @Entity
-public class Contacts {
-@Id
-@GeneratedValue(strategy = GenerationType.IDENTITY)
+public class Contact {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String type;
+    @Enumerated(EnumType.STRING)
+    private ContactType type;
 
     private String contact_value;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "clients_id", nullable = false)
+    @JoinColumn(name = "client_id", nullable = false)
     @JsonBackReference
     @ToString.Exclude
-    private Clients clients;
+    private Client client;
 }

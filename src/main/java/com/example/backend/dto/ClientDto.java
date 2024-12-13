@@ -9,8 +9,8 @@ import java.util.List;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class ClientsDto {
+public class ClientDto {
     private String name;
 
-    private List<ContactsDto> contactsDto;
+    List<ContactDto> contactDto;
 }
