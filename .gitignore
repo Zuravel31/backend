@@ -31,3 +31,11 @@ build/
 
 ### VS Code ###
 .vscode/
+
+*.password
+*.secret
+
+config/passwords.txt
+config/secrets.json
+
+
